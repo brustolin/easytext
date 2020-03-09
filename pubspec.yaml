@@ -1,8 +1,7 @@
 name: easytext
 description: Avoid Text boiler plate with this awesome library full of helper constructors to create styled text easily.
-version: 0.1.3
-author: Dhiogo Ramos Brustolin
-homepage: https://github.com/brustolin/flutter_txt
+version: 0.1.8
+homepage: https://github.com/brustolin/easytext
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
