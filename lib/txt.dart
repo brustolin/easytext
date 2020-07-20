@@ -20,18 +20,18 @@ TextStyle _buildStyle(TextStyle baseStyle, double size, Color color,
 ///Themed style to use in the text
 enum TxtStyle {
   none,
-  display4,
-  display3,
-  display2,
-  display1,
-  headline,
-  title,
-  subhead,
-  body2,
-  body1,
+  headline1,
+  headline2,
+  headline3,
+  headline4,
+  headline5,
+  headline6,
+  subtitle1,
+  subtitle2,
+  bodyText1,
+  bodyText2,
   caption,
   button,
-  subtitle,
   overline,
 }
 
@@ -316,74 +316,78 @@ class Txt extends StatelessWidget {
           key: key,
         );
 
-  /// Creates a txt widget with display4 theme.
+  /// Creates a bold txt widget with determined text size.
   ///
-  /// The [style] parameter is used to override theme properties.
+  /// If the [style] argument is null, the text will use the style from the
+  /// closest enclosing [DefaultTextStyle].
   ///
-  /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
+  /// The parameters [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.display4(this.text,
-      {Key key,
-      this.style,
-      this.strutStyle,
-      this.align,
-      this.direction,
-      this.locale,
-      this.softWrap,
-      this.overflow,
-      this.scaleFactor,
-      this.maxLines,
-      this.semanticsLabel,
-      this.widthBasis,
-      this.size,
-      this.color,
-      this.weight,
-      this.fontFamily,
-      this.italic = false})
-      : this.baseStyle = TxtStyle.display4,
+  const Txt.bs(
+    this.text,
+    this.size, {
+    Key key,
+    this.color,
+    this.style,
+    this.strutStyle,
+    this.align,
+    this.direction,
+    this.locale,
+    this.softWrap,
+    this.overflow,
+    this.scaleFactor,
+    this.maxLines,
+    this.semanticsLabel,
+    this.widthBasis,
+    this.fontFamily,
+    this.italic = false,
+  })  : this.baseStyle = TxtStyle.none,
+        this.weight = FontWeight.bold,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with display3 theme.
+  /// Creates a bold txt widget with determined text color and size.
   ///
-  /// The [style] parameter is used to override theme properties.
+  /// If the [style] argument is null, the text will use the style from the
+  /// closest enclosing [DefaultTextStyle].
   ///
-  /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
+  /// The parameters [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.display3(this.text,
-      {Key key,
-      this.style,
-      this.strutStyle,
-      this.align,
-      this.direction,
-      this.locale,
-      this.softWrap,
-      this.overflow,
-      this.scaleFactor,
-      this.maxLines,
-      this.semanticsLabel,
-      this.widthBasis,
-      this.size,
-      this.color,
-      this.weight,
-      this.fontFamily,
-      this.italic = false})
-      : this.baseStyle = TxtStyle.display3,
+  const Txt.bsc(
+    this.text,
+    this.size,
+    this.color, {
+    Key key,
+    this.style,
+    this.strutStyle,
+    this.align,
+    this.direction,
+    this.locale,
+    this.softWrap,
+    this.overflow,
+    this.scaleFactor,
+    this.maxLines,
+    this.semanticsLabel,
+    this.widthBasis,
+    this.fontFamily,
+    this.italic = false,
+  })  : this.baseStyle = TxtStyle.none,
+        this.weight = FontWeight.bold,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with display2 theme.
+  /// Creates a txt widget with headline1 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.display2(this.text,
+  Txt.headline1(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -401,19 +405,19 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.display2,
+      : this.baseStyle = TxtStyle.headline1,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with display1 theme.
+  /// Creates a txt widget with headline2 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.display1(this.text,
+  Txt.headline2(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -431,19 +435,19 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.display1,
+      : this.baseStyle = TxtStyle.headline2,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with headline theme.
+  /// Creates a txt widget with headline3 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline(this.text,
+  Txt.headline3(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -461,19 +465,19 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.headline,
+      : this.baseStyle = TxtStyle.headline3,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with title theme.
+  /// Creates a txt widget with headline4 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.title(this.text,
+  Txt.headline4(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -491,19 +495,19 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.title,
+      : this.baseStyle = TxtStyle.headline4,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with subhead theme.
+  /// Creates a txt widget with headline5 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.subhead(this.text,
+  Txt.headline5(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -521,19 +525,19 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.subhead,
+      : this.baseStyle = TxtStyle.headline5,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with body2 theme.
+  /// Creates a txt widget with headline6 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.body2(this.text,
+  Txt.headline6(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -551,19 +555,19 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.body2,
+      : this.baseStyle = TxtStyle.headline6,
         super(
           key: key,
         );
 
-  /// Creates a txt widget with body1 theme.
+  /// Creates a txt widget with subtitle1 theme.
   ///
   /// The [style] parameter is used to override theme properties.
   ///
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.body1(this.text,
+  Txt.subtitle1(this.text,
       {Key key,
       this.style,
       this.strutStyle,
@@ -581,7 +585,97 @@ class Txt extends StatelessWidget {
       this.weight,
       this.fontFamily,
       this.italic = false})
-      : this.baseStyle = TxtStyle.body1,
+      : this.baseStyle = TxtStyle.subtitle1,
+        super(
+          key: key,
+        );
+
+  /// Creates a txt widget with subtitle2 theme.
+  ///
+  /// The [style] parameter is used to override theme properties.
+  ///
+  /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
+  ///
+  /// The [text] parameter must not be null.
+  Txt.subtitle2(this.text,
+      {Key key,
+      this.style,
+      this.strutStyle,
+      this.align,
+      this.direction,
+      this.locale,
+      this.softWrap,
+      this.overflow,
+      this.scaleFactor,
+      this.maxLines,
+      this.semanticsLabel,
+      this.widthBasis,
+      this.size,
+      this.color,
+      this.weight,
+      this.fontFamily,
+      this.italic = false})
+      : this.baseStyle = TxtStyle.subtitle2,
+        super(
+          key: key,
+        );
+
+  /// Creates a txt widget with bodyText1 theme.
+  ///
+  /// The [style] parameter is used to override theme properties.
+  ///
+  /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
+  ///
+  /// The [text] parameter must not be null.
+  Txt.bodyText1(this.text,
+      {Key key,
+      this.style,
+      this.strutStyle,
+      this.align,
+      this.direction,
+      this.locale,
+      this.softWrap,
+      this.overflow,
+      this.scaleFactor,
+      this.maxLines,
+      this.semanticsLabel,
+      this.widthBasis,
+      this.size,
+      this.color,
+      this.weight,
+      this.fontFamily,
+      this.italic = false})
+      : this.baseStyle = TxtStyle.bodyText1,
+        super(
+          key: key,
+        );
+
+  /// Creates a txt widget with bodyText2 theme.
+  ///
+  /// The [style] parameter is used to override theme properties.
+  ///
+  /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
+  ///
+  /// The [text] parameter must not be null.
+  Txt.bodyText2(this.text,
+      {Key key,
+      this.style,
+      this.strutStyle,
+      this.align,
+      this.direction,
+      this.locale,
+      this.softWrap,
+      this.overflow,
+      this.scaleFactor,
+      this.maxLines,
+      this.semanticsLabel,
+      this.widthBasis,
+      this.size,
+      this.color,
+      this.weight,
+      this.fontFamily,
+      this.italic = false})
+      : this.baseStyle = TxtStyle.bodyText2,
         super(
           key: key,
         );
@@ -646,36 +740,6 @@ class Txt extends StatelessWidget {
           key: key,
         );
 
-  /// Creates a txt widget with subtitle theme.
-  ///
-  /// The [style] parameter is used to override theme properties.
-  ///
-  /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
-  ///
-  /// The [text] parameter must not be null.
-  Txt.subtitle(this.text,
-      {Key key,
-      this.style,
-      this.strutStyle,
-      this.align,
-      this.direction,
-      this.locale,
-      this.softWrap,
-      this.overflow,
-      this.scaleFactor,
-      this.maxLines,
-      this.semanticsLabel,
-      this.widthBasis,
-      this.size,
-      this.color,
-      this.weight,
-      this.fontFamily,
-      this.italic = false})
-      : this.baseStyle = TxtStyle.subtitle,
-        super(
-          key: key,
-        );
-
   /// Creates a txt widget with overline theme.
   ///
   /// The [style] parameter is used to override theme properties.
@@ -708,30 +772,30 @@ class Txt extends StatelessWidget {
 
   TextStyle _baseStyle(BuildContext context) {
     switch (this.baseStyle) {
-      case TxtStyle.display4:
-        return Theme.of(context).textTheme.display4;
-      case TxtStyle.display3:
-        return Theme.of(context).textTheme.display3;
-      case TxtStyle.display2:
-        return Theme.of(context).textTheme.display2;
-      case TxtStyle.display1:
-        return Theme.of(context).textTheme.display1;
-      case TxtStyle.headline:
-        return Theme.of(context).textTheme.headline;
-      case TxtStyle.title:
-        return Theme.of(context).textTheme.title;
-      case TxtStyle.subhead:
-        return Theme.of(context).textTheme.subhead;
-      case TxtStyle.body2:
-        return Theme.of(context).textTheme.body2;
-      case TxtStyle.body1:
-        return Theme.of(context).textTheme.body2;
+      case TxtStyle.headline1:
+        return Theme.of(context).textTheme.headline1;
+        case TxtStyle.headline2:
+        return Theme.of(context).textTheme.headline2;
+        case TxtStyle.headline3:
+        return Theme.of(context).textTheme.headline3;
+        case TxtStyle.headline4:
+        return Theme.of(context).textTheme.headline4;
+        case TxtStyle.headline5:
+        return Theme.of(context).textTheme.headline5;
+        case TxtStyle.headline6:
+        return Theme.of(context).textTheme.headline6;
+      case TxtStyle.subtitle1:
+        return Theme.of(context).textTheme.subtitle1;
+        case TxtStyle.subtitle2:
+        return Theme.of(context).textTheme.subtitle2;
+      case TxtStyle.bodyText1:
+        return Theme.of(context).textTheme.bodyText1;
+        case TxtStyle.bodyText2:
+        return Theme.of(context).textTheme.bodyText2;
       case TxtStyle.caption:
         return Theme.of(context).textTheme.caption;
       case TxtStyle.button:
         return Theme.of(context).textTheme.button;
-      case TxtStyle.subtitle:
-        return Theme.of(context).textTheme.subtitle;
       case TxtStyle.overline:
         return Theme.of(context).textTheme.overline;
       default:

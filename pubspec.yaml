@@ -1,6 +1,6 @@
 name: easytext
 description: Avoid Text boiler plate with this awesome library full of helper constructors to create styled text easily.
-version: 0.1.8
+version: 0.2.0
 homepage: https://github.com/brustolin/easytext
 
 environment:
