@@ -23,7 +23,7 @@ or
 ```Txt.i("Hello World!!");```  
   
 And also this  
-```Txt("Hello World!!", style: TextStyle(color: Colors.red, fontSize: 22))```  
+```Text("Hello World!!", style: TextStyle(color: Colors.red, fontSize: 22))```  
 became  
 ```Txt("Hello World!!", size: 22, color: Colors.red)```  
 or  

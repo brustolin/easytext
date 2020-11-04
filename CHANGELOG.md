@@ -1,3 +1,7 @@
+## [1.0.0] - 03/11/2020.
+
+* Change to use primaryTextTheme
+
 ## [0.1.8] - 03/10/2020.
 
 * Documentation update

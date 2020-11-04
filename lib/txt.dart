@@ -773,31 +773,31 @@ class Txt extends StatelessWidget {
   TextStyle _baseStyle(BuildContext context) {
     switch (this.baseStyle) {
       case TxtStyle.headline1:
-        return Theme.of(context).textTheme.headline1;
+        return Theme.of(context).primaryTextTheme.headline1;
         case TxtStyle.headline2:
-        return Theme.of(context).textTheme.headline2;
+        return Theme.of(context).primaryTextTheme.headline2;
         case TxtStyle.headline3:
-        return Theme.of(context).textTheme.headline3;
+        return Theme.of(context).primaryTextTheme.headline3;
         case TxtStyle.headline4:
-        return Theme.of(context).textTheme.headline4;
+        return Theme.of(context).primaryTextTheme.headline4;
         case TxtStyle.headline5:
-        return Theme.of(context).textTheme.headline5;
+        return Theme.of(context).primaryTextTheme.headline5;
         case TxtStyle.headline6:
-        return Theme.of(context).textTheme.headline6;
+        return Theme.of(context).primaryTextTheme.headline6;
       case TxtStyle.subtitle1:
-        return Theme.of(context).textTheme.subtitle1;
+        return Theme.of(context).primaryTextTheme.subtitle1;
         case TxtStyle.subtitle2:
-        return Theme.of(context).textTheme.subtitle2;
+        return Theme.of(context).primaryTextTheme.subtitle2;
       case TxtStyle.bodyText1:
-        return Theme.of(context).textTheme.bodyText1;
+        return Theme.of(context).primaryTextTheme.bodyText1;
         case TxtStyle.bodyText2:
-        return Theme.of(context).textTheme.bodyText2;
+        return Theme.of(context).primaryTextTheme.bodyText2;
       case TxtStyle.caption:
-        return Theme.of(context).textTheme.caption;
+        return Theme.of(context).primaryTextTheme.caption;
       case TxtStyle.button:
-        return Theme.of(context).textTheme.button;
+        return Theme.of(context).primaryTextTheme.button;
       case TxtStyle.overline:
-        return Theme.of(context).textTheme.overline;
+        return Theme.of(context).primaryTextTheme.overline;
       default:
         return null;
     }
