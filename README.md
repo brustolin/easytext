@@ -1,4 +1,4 @@
-# txt
+# easytext [![popularity](https://badges.bar/easytext/popularity)](https://pub.dev/packages/sentry/score) [![likes](https://badges.bar/easytext/likes)](https://pub.dev/packages/easytext/score) [![pub points](https://badges.bar/easytext/pub%20points)](https://pub.dev/packages/easytext/score)
 
 Avoid Text boilerplate with this awesome library full of helper constructors to create styled text easily.
 
