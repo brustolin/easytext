@@ -2,8 +2,8 @@ library txt;
 
 import 'package:flutter/material.dart';
 
-TextStyle _buildStyle(TextStyle baseStyle, double size, Color color,
-        FontWeight weight, String fontFamily, bool italic) =>
+TextStyle _buildStyle(TextStyle? baseStyle, double? size, Color? color,
+        FontWeight? weight, String? fontFamily, bool italic) =>
     baseStyle?.copyWith(
         color: color ?? baseStyle.color,
         fontSize: size ?? baseStyle.fontSize,
@@ -44,51 +44,51 @@ class Txt extends StatelessWidget {
   final String text;
 
   /// Text style
-  final TextStyle style;
+  final TextStyle? style;
 
   /// {@macro flutter.painting.textPainter.strutStyle}
-  final StrutStyle strutStyle;
+  final StrutStyle? strutStyle;
 
   /// Text horizontal aligment
-  final TextAlign align;
+  final TextAlign? align;
 
   /// Text horizontal direction
-  final TextDirection direction;
+  final TextDirection? direction;
 
   /// Text locale
-  final Locale locale;
+  final Locale? locale;
 
   /// Whether the text should break at soft line breaks.
   ///
   /// If false, the glyphs in the text will be positioned as if there was unlimited horizontal space.
-  final bool softWrap;
+  final bool? softWrap;
 
   /// How visual overflow should be handled.
-  final TextOverflow overflow;
+  final TextOverflow? overflow;
 
   /// Text scale factor
-  final double scaleFactor;
+  final double? scaleFactor;
 
   /// Text maximum lines
-  final int maxLines;
+  final int? maxLines;
 
   /// An alternative semantics label for this text.
-  final String semanticsLabel;
+  final String? semanticsLabel;
 
   /// {@macro flutter.painting.textPainter.textWidthBasis}
-  final TextWidthBasis widthBasis;
+  final TextWidthBasis? widthBasis;
 
   /// Text size
-  final double size;
+  final double? size;
 
   /// Text color
-  final Color color;
+  final Color? color;
 
   /// Text font weight
-  final FontWeight weight;
+  final FontWeight? weight;
 
   ///T ext font family
-  final String fontFamily;
+  final String? fontFamily;
 
   /// Indicates whether the text is italic
   final bool italic;
@@ -105,7 +105,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   const Txt(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -136,7 +136,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   const Txt.b(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -167,7 +167,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   const Txt.i(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -198,7 +198,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   const Txt.bi(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -231,7 +231,7 @@ class Txt extends StatelessWidget {
   const Txt.s(
     this.text,
     this.size, {
-    Key key,
+    Key? key,
     this.style,
     this.strutStyle,
     this.align,
@@ -263,7 +263,7 @@ class Txt extends StatelessWidget {
   const Txt.c(
     this.text,
     this.color, {
-    Key key,
+    Key? key,
     this.style,
     this.strutStyle,
     this.align,
@@ -296,7 +296,7 @@ class Txt extends StatelessWidget {
     this.text,
     this.size,
     this.color, {
-    Key key,
+    Key? key,
     this.style,
     this.strutStyle,
     this.align,
@@ -327,7 +327,7 @@ class Txt extends StatelessWidget {
   const Txt.bs(
     this.text,
     this.size, {
-    Key key,
+    Key? key,
     this.color,
     this.style,
     this.strutStyle,
@@ -360,7 +360,7 @@ class Txt extends StatelessWidget {
     this.text,
     this.size,
     this.color, {
-    Key key,
+    Key? key,
     this.style,
     this.strutStyle,
     this.align,
@@ -388,7 +388,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.headline1(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -418,7 +418,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.headline2(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -448,7 +448,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.headline3(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -478,7 +478,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.headline4(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -508,7 +508,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.headline5(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -538,7 +538,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.headline6(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -568,7 +568,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.subtitle1(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -598,7 +598,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.subtitle2(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -628,7 +628,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.bodyText1(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -658,7 +658,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.bodyText2(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -688,7 +688,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.caption(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -718,7 +718,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.button(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -748,7 +748,7 @@ class Txt extends StatelessWidget {
   ///
   /// The [text] parameter must not be null.
   Txt.overline(this.text,
-      {Key key,
+      {Key? key,
       this.style,
       this.strutStyle,
       this.align,
@@ -770,7 +770,7 @@ class Txt extends StatelessWidget {
           key: key,
         );
 
-  TextStyle _baseStyle(BuildContext context) {
+  TextStyle? _baseStyle(BuildContext context) {
     switch (this.baseStyle) {
       case TxtStyle.headline1:
         return Theme.of(context).primaryTextTheme.headline1;
@@ -805,8 +805,8 @@ class Txt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle usingStyle = baseStyle != TxtStyle.none && baseStyle != null
-        ? _baseStyle(context).merge(style)
+    final TextStyle? usingStyle = baseStyle != TxtStyle.none && baseStyle != null
+        ? _baseStyle(context)!.merge(style)
         : style;
 
     return Text(text,

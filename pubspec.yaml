@@ -1,10 +1,10 @@
 name: easytext
 description: Avoid Text boiler plate with this awesome library full of helper constructors to create styled text easily.
-version: 1.0.0
+version: 2.0.0
 homepage: https://github.com/brustolin/easytext
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
