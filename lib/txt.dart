@@ -2,8 +2,7 @@ library txt;
 
 import 'package:flutter/material.dart';
 
-TextStyle _buildStyle(TextStyle? baseStyle, double? size, Color? color,
-        FontWeight? weight, String? fontFamily, bool italic) =>
+TextStyle _buildStyle(TextStyle? baseStyle, double? size, Color? color, FontWeight? weight, String? fontFamily, bool italic) =>
     baseStyle?.copyWith(
         color: color ?? baseStyle.color,
         fontSize: size ?? baseStyle.fontSize,
@@ -387,7 +386,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline1(this.text,
+  const Txt.headline1(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -417,7 +416,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline2(this.text,
+  const Txt.headline2(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -447,7 +446,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline3(this.text,
+  const Txt.headline3(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -477,7 +476,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline4(this.text,
+  const Txt.headline4(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -507,7 +506,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline5(this.text,
+  const Txt.headline5(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -537,7 +536,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.headline6(this.text,
+  const Txt.headline6(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -567,7 +566,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.subtitle1(this.text,
+  const Txt.subtitle1(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -597,7 +596,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.subtitle2(this.text,
+  const Txt.subtitle2(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -627,7 +626,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.bodyText1(this.text,
+  const Txt.bodyText1(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -657,7 +656,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.bodyText2(this.text,
+  const Txt.bodyText2(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -687,7 +686,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.caption(this.text,
+  const Txt.caption(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -717,7 +716,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.button(this.text,
+  const Txt.button(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -747,7 +746,7 @@ class Txt extends StatelessWidget {
   /// The parameters [size], [color], [weight], [fontFamily] and [italic] overrides the style properties.
   ///
   /// The [text] parameter must not be null.
-  Txt.overline(this.text,
+  const Txt.overline(this.text,
       {Key? key,
       this.style,
       this.strutStyle,
@@ -774,23 +773,23 @@ class Txt extends StatelessWidget {
     switch (this.baseStyle) {
       case TxtStyle.headline1:
         return Theme.of(context).primaryTextTheme.headline1;
-        case TxtStyle.headline2:
+      case TxtStyle.headline2:
         return Theme.of(context).primaryTextTheme.headline2;
-        case TxtStyle.headline3:
+      case TxtStyle.headline3:
         return Theme.of(context).primaryTextTheme.headline3;
-        case TxtStyle.headline4:
+      case TxtStyle.headline4:
         return Theme.of(context).primaryTextTheme.headline4;
-        case TxtStyle.headline5:
+      case TxtStyle.headline5:
         return Theme.of(context).primaryTextTheme.headline5;
-        case TxtStyle.headline6:
+      case TxtStyle.headline6:
         return Theme.of(context).primaryTextTheme.headline6;
       case TxtStyle.subtitle1:
         return Theme.of(context).primaryTextTheme.subtitle1;
-        case TxtStyle.subtitle2:
+      case TxtStyle.subtitle2:
         return Theme.of(context).primaryTextTheme.subtitle2;
       case TxtStyle.bodyText1:
         return Theme.of(context).primaryTextTheme.bodyText1;
-        case TxtStyle.bodyText2:
+      case TxtStyle.bodyText2:
         return Theme.of(context).primaryTextTheme.bodyText2;
       case TxtStyle.caption:
         return Theme.of(context).primaryTextTheme.caption;
@@ -805,9 +804,7 @@ class Txt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle? usingStyle = baseStyle != TxtStyle.none && baseStyle != null
-        ? _baseStyle(context)!.merge(style)
-        : style;
+    final TextStyle? usingStyle = baseStyle != TxtStyle.none ? _baseStyle(context)!.merge(style) : style;
 
     return Text(text,
         strutStyle: strutStyle,
@@ -820,7 +817,6 @@ class Txt extends StatelessWidget {
         maxLines: maxLines,
         semanticsLabel: semanticsLabel,
         textWidthBasis: widthBasis,
-        style:
-            _buildStyle(usingStyle, size, color, weight, fontFamily, italic));
+        style: _buildStyle(usingStyle, size, color, weight, fontFamily, italic));
   }
 }

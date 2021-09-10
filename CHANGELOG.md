@@ -1,3 +1,7 @@
+## [2.0.1] - 09/10/2021.
+
+* Make all initializers `const`
+
 ## [2.0.0] - 08/23/2021.
 
 * Null safe version
